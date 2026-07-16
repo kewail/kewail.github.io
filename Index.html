@@ -1,1 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEWAIL Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Merriweather , Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #111111;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #aa1128;
+            color: #000000;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .navbar h1 {
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #b7b7b5;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('IMG_20260715_232632_312.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #333333;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #C8102E;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        section h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            color: #eaeaea;
+        }
+
+        section h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #888888;
+            margin: 0.5rem auto 0 auto;
+        }
+
+        .about-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 70%;
+            margin: 0 auto;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .sop-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 70%;
+            margin: 0 auto;
+        
+            text-align: justify;   
+            line-height: 2;        
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            text-align: center;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 1rem;
+            }
+            .nav-links li {
+                margin: 0 1rem;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+    <nav class="navbar">
+        <h1>Kewail</h1>
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#sop">SOP</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Information</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>นางสาวเกวลิน แซ่ตั้ง</h2>
+        <p> ม.6/3 เลขที่1การแสดง <i class="fa-solid fa-gear"></i> </p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h3> About Me </h3>
+            <div class="about-content">
+                <p> "ชนะใจตัวเอง คือชัยชนะที่ยิ่งใหญ่" </p>
+            </div>
+        </section>
+        
+        <section id="sop">
+            <h3>SOP</h3>
+            <div class="sop-content">
+                <p>ดิฉันนางสาวเกวลิน แซ่ตั้ง อายุ17ปี ระดับชั้นมธัยมศึกษาปีที่6 ปัจจุบันศึกษาอยูที่โรงเรียนเซนต์โยเซฟทิพวัล เรียนสายศิลป์การแสดง คณะที่สนใจคคือคณะศิลปกรรมศาสตร์   สาขาวิชาศิลปะการแสดง วิชาเอกการแสดงและกำกับ การแสดงแสดง มหาวิทยาลัยศรีนครินทรวิโรฒ
+  ความคิดของดิฉันเปลี่ยนไปหลังจากที่เข้ามาเรียนสายการแสดง มันไม่ง่ายเลยที่เราจะทำหนัง ทำบทละครออกมาง่ายๆเหมือนที่เคยคิด หรือ ลองแสดงเป็นตัวละครนั้นต้องเข้าใจตัวละครนั้นมากๆนึกถึงเหตุและผลของตัวละครที่ิอยากจะสื่อถึงจะทำมันออกมาได้ การแสดงนั้นก็ต้องลงทุนทั้งแรงกายและสุขภาพหลายอย่างที่เราไม่เคยรู้  ไม่ต่างจากอาชีพอื่นเลย ต้องออกกอง ถ่ายทำงานจนกว่าจะได้ซีนที่ต้องการทำงานจนดึก ทำงานกันเป็นทีมหากล้มเหลว ก็เท่ากับเราทำให้คนในกองเสียเวลา กดดันไม่ต่างจากอาชีพอื่นเลย ต้องมีความรับผิดชอบกับคนหลายคน ต้องพยายามที่จะทำให้หนังนั้นออกมาดีที่สุด ไม่ใช่แค่กับนักแสดงที่เป็นตัวนำหลัก แต่ กับคนที่อยู่เบื้องหลังทุกคนที่พยายามไม่ต่างกัน การเป็นนักแสดงไม่ใช่ว่าอยากเป็นแล้วเป็นได้เหมือนที่เคยคิด จนทำให้ดิฉัน นึกถึงนักแสดงหลายท่านที่เคยได้ขึ้นไปรับรางวัลนักแสดงดีเด่น ได้รับความชื่นชม คนหลายคนที่คิดว่ามันง่ายรวมถึงดิฉัน กลับไม่เคยเห็น ว่าเขาพยายามกันขนาดไหนถึงได้มาอยู่จุดนี้ พวกเราแค่เคยเห็นตอนที่พวกเขาประสบความสำเร็จ มีชื่อเสียง โด่งดัง 
+  เหตุผลที่ทำให้ดิฉันอยากเรียนคณะนี้ หลายครั้งที่ดิฉัน คิดลังเลอยากล้มเลิกในสายงานนี้เพราะความไม่แน่นอนหลายอย่าง หน้าที่การงาน และ ความพยายาม ความอดทนในหลายเรื่อง  ที่ต้องพร้อมจะแลก แต่ ดิฉันไม่อยากให้ความฝันเป็นแค่ความฝันในวัยเด็กและจบลงด้วยความไม่แน่นอนในสังคมปัจจุบัน ดิฉันอยากที่จะเรียนรู้ให้มากขึ้น ในสายงานนี้ อยากพัฒนาตัวเองให้ไปได้ไกล กว่าที่เคยคิดว่าจะเป็น ดิฉันเคยมาดูงานที่มหาลัยแห่งนี้ และ ได้ศึกษาการเรียนการสอนของคณะอาจารย์ มาพอสมควร ถึงจะยากและต้องแลกมากับความเหนื่อย ความรับผิดชอบที่ต้องมากขึ้น แต่ถ้าหากทำให้ตัวดิฉันนั้นได้ความรู้สิ่งใหม่เพิ่มและพัฒนาตัวเองได้ดีขึ้น ดิฉันพร้อมที่จะเรียนรู้รับประสบการณ์ที่อาจารย์ทุกท่าน พร้อมจะมอบให้นำมาปรับใช้ ดิฉันอยากพิสูจน์ให้ตัวเองเห็นว่า มันจะไม่ใช่แค่ความฝันที่คิดแล้วไม่มีวันเป็นจริง อยากทำแต่ไม่มีวันได้ทำ ไม่ใช่แค่อยากแล้วจบไป แต่ ต้องการที่ได้ลอง ได้เรียนรู้ ได้ทำมันจริงๆ</p>
+            </div>
+        </section>
+        <section id="projects">
+            <h3> Projects </h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Project One Title</h4>
+                        <p> ... </p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Project Two Title</h4>
+                        <p> ...</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Project Three Title</h4>
+                        <p> ... </p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3> Contact Informaaation </h3>
+            <div class="contact-info">
+                <p>เบอร์ 0971347669
+Email kewailsaetang@gmail.com 
+IG : zksyng <p>
